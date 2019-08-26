@@ -12,7 +12,7 @@ The purpose of this project is to create a webpage that promotes my friend Pat's
 ### Tools Used
   <ul>
     <li>VS Code</li>
-    <li></li>
+    <li>Salmon Photo Credit: my friend Pat</li>
     <li></li>
   </ul>  
 
