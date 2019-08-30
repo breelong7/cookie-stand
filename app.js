@@ -43,6 +43,22 @@ Store.prototype.calculateCookies = function(){
 };
 
 
+function printHours(){
+  var thEl = document.createElement('th');
+
+  storeListEl.appendChild(thEl);
+
+  for(var i = 0; i < hourlyTotal.length; i++){
+    thEl.appendChild(document.createElement('th')).
+      appendChild(document.createTextNode(hourlyTotal[i]));
+  }
+}
+
+printHours();
+
+
+
+
 Store.prototype.dailyTotal = function(){
   this.calculateCookies();
 
@@ -52,15 +68,26 @@ Store.prototype.dailyTotal = function(){
   }
 };
 
-for (var i = 0; i < allStores.length; i++){
-  allStores[i].dailyTotal();
+for (var j = 0; j < allStores.length; j++){
+  allStores[j].dailyTotal();
 }
 
-// var totalCookiesPerHour = Math.round(numCookies);
-// console.log('print rounded number', totalCookiesPerHour);
+
+Store.prototype.hourRender = function(){
+  for (var i = 0; i < hourlyTotal.length; i++) {
+    var trEl = document.createElement('tr');
+    var tdEl = document.createElement ('td');
+    tdEl.textContent = hourlyTotal[i];
+    trEl.appendChild(tdEl);
+  }
+};
+
+Store.prototype.hourRender();
 
 
 Store.prototype.render = function(){
+
+
   //make a tr
   var trEl = document.createElement('tr');
   storeListEl.appendChild(trEl);
@@ -73,21 +100,39 @@ Store.prototype.render = function(){
   //stick it to the DOM
   trEl.appendChild(tdEl);
 
+  for (var i = 0; i < hourlyTotal.length; i++){
+    tdEl = document.createElement('td');
+    tdEl.textContent = this.hourlyCookieSales[i];
+    trEl.appendChild(tdEl);
+  }
+
   //create a td
   tdEl = document.createElement('td');
   //fill with number of cookies needed
   tdEl.textContent = this.totalNumberOfCookies;
   //stick it to the DOM
   trEl.appendChild(tdEl);
+
 };
 
 
 
+function printAllStores() {
+  for (var i = 0; i < allStores.length; i++){
+    allStores[i].render();
+  }
 
-allStores[0].render();
+}
 
+printAllStores();
 
+function printAllHours() {
+  for (var i = 0; i < hourlyTotal.length; i++) {
+    hourlyTotal[i].render();
+  }
+}
 
+printAllHours();
 
 
 // function renderHeader(){
