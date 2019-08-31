@@ -14,3 +14,19 @@
   padding: 2%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+#store-list {
+  border: 1px solid black;
+}
+
+tr {
+  border: 1px solid red;
+}
+
+td {
+  border: 1px solid blue;
+}
+
+th {
+  border: 1px solid pink
+}
