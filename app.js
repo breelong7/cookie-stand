@@ -4,6 +4,7 @@
 var storeTableEl = document.getElementById('store-table');
 var allStores = [];
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var dailyTotalArr = [];
 
 function random(min, max){
   return Math.random() * (max - min) + min;
@@ -73,11 +74,13 @@ printHours();
 
 
 // function to calculate daily total cookies per store
+
 Store.prototype.dailyTotal = function(){
   //invoke function that calculate total
   this.calculateCookies();
 
   //loop through hourly cookie sales array, get the sum of total number of cookies plus hourly cookie sales array
+
   for (var i = 0; i < this.hourlyCookieSalesArr.length; i++) {
     this.totalNumberOfCookies += this.hourlyCookieSalesArr[i];
   }
@@ -85,6 +88,7 @@ Store.prototype.dailyTotal = function(){
 
 for (var j = 0; j < allStores.length; j++){
   allStores[j].dailyTotal();
+  
 }
 
 
@@ -176,8 +180,26 @@ function renderFooter() {
     tdEl.textContent = totalPerHour;
 
   }
+
+
+
+  //declare grand total variable
+  var grandTotal = 0;
+  //loop through each hour in hours array
+  for(var i = 0; i < hours.length; i++){
+    //declare hour total variable to store total per location
+    var hourTotal = 0;
+    for (var k = 0; k < allStores.length; k++){
+      hourTotal += allStores[k].hourlyCookieSalesArr[i];
+      console.log('hour total', hourTotal);
+      console.log('grand total', grandTotal);
+    }
+
+    grandTotal += hourTotal;
+  }
+  tdEl = document.createElement('td');
+  tdEl.textContent = grandTotal;
+  trEl.appendChild(tdEl);
 }
 
 renderFooter();
-
-
