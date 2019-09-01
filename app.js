@@ -4,7 +4,7 @@
 var storeTableEl = document.getElementById('store-table');
 var allStores = [];
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
-var dailyTotalArr = [];
+
 
 function random(min, max){
   return Math.random() * (max - min) + min;
@@ -88,12 +88,8 @@ Store.prototype.dailyTotal = function(){
 
 for (var j = 0; j < allStores.length; j++){
   allStores[j].dailyTotal();
-  
 }
 
-
-
-// console.log(this.hourlyCookieSalesArr);
 
 
 Store.prototype.render = function(){
@@ -129,7 +125,7 @@ Store.prototype.render = function(){
 };
 
 
-
+//function to print stores
 function printAllStores() {
   for (var i = 0; i < allStores.length; i++){
     allStores[i].render();
@@ -155,12 +151,6 @@ function renderFooter() {
   //append table data to table row
   trEl.appendChild(tdEl);
 
-  // }
-
-
-  // // var totalPerHourArr = [];
-  // function renderTotal(){
-
   //nested for loop to loop through each hour
   for (var currentHour = 0; currentHour < hours.length; currentHour++){
     var totalPerHour = 0;
@@ -168,12 +158,8 @@ function renderFooter() {
     for (var store = 0; store < allStores.length; store++ ){
       totalPerHour += allStores[store].hourlyCookieSalesArr[currentHour];
     }
-    //create array to store all totals per hour
-    // totalPerHourArr.push(totalPerHour);
-    // console.log('my total per hour array', totalPerHour);
 
     //add total per hour as table data
-    // for (var i = 0; i < totalPerHour; i++){
     tdEl = document.createElement('td');
     storeTableEl.appendChild(trEl);
     trEl.appendChild(tdEl);
@@ -181,22 +167,22 @@ function renderFooter() {
 
   }
 
-
-
   //declare grand total variable
   var grandTotal = 0;
   //loop through each hour in hours array
   for(var i = 0; i < hours.length; i++){
     //declare hour total variable to store total per location
     var hourTotal = 0;
+    //loop through stores to get sum of hourly totals
     for (var k = 0; k < allStores.length; k++){
       hourTotal += allStores[k].hourlyCookieSalesArr[i];
       console.log('hour total', hourTotal);
       console.log('grand total', grandTotal);
     }
-
+    //grand total equals sum of hourly totals
     grandTotal += hourTotal;
   }
+  //create td element, fill with grand total var, stick to dom
   tdEl = document.createElement('td');
   tdEl.textContent = grandTotal;
   trEl.appendChild(tdEl);
