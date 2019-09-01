@@ -30,3 +30,7 @@ td {
 th {
   border: 1px solid pink
 }
+
+tfoot {
+  border: 1px
+}
