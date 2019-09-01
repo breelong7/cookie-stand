@@ -30,6 +30,7 @@ new Store('Capitol Hill', 20, 38, 2.3);
 new Store('Alki', 2, 16, 4.6);
 
 
+
 //calculate number of cookies needed per hour and push to hourly cookies sales array
 Store.prototype.calculateCookies = function(){
   for (var i = 0; i < hours.length; i++){
@@ -76,7 +77,7 @@ Store.prototype.dailyTotal = function(){
   //invoke function that calculate total
   this.calculateCookies();
 
-
+  //loop through hourly cookie sales array, get the sum of total number of cookies plus hourly cookie sales array
   for (var i = 0; i < this.hourlyCookieSalesArr.length; i++) {
     this.totalNumberOfCookies += this.hourlyCookieSalesArr[i];
   }
@@ -88,7 +89,7 @@ for (var j = 0; j < allStores.length; j++){
 
 
 
-console.log(this.hourlyCookieSalesArr);
+// console.log(this.hourlyCookieSalesArr);
 
 
 Store.prototype.render = function(){
