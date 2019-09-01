@@ -63,7 +63,7 @@ function printHours(){
     trEl.appendChild(tdEl);
   }
   var total = document.createElement('td');
-  total.textContent = 'Total';
+  total.textContent = 'Daily Location Total';
   trEl.appendChild(total);
 }
 
@@ -87,17 +87,8 @@ for (var j = 0; j < allStores.length; j++){
 }
 
 
-// Store.hourRender = function(){
-//   for (var i = 0; i < hours.length; i++) {
-//     var tdEl = document.createElement ('td');
-//     tdEl.textContent = hours[i];
-//     trEl.appendChild(tdEl);
-//   }
-// };
 
 console.log(this.hourlyCookieSalesArr);
-
-// Store.hourRender();
 
 
 Store.prototype.render = function(){
@@ -143,137 +134,49 @@ function printAllStores() {
 
 printAllStores();
 
-// function printAllHours() {
-//   for (var i = 0; i < hours.length; i++) {
-//     hours[i].render();
-//   }
-// }
+//create footer
+function renderFooter() {
+  // declare footer variable and create tfoot element
+  var tfootEl = document.createElement('tfoot');
+  //append tfoot to table
+  storeTableEl.appendChild(tfootEl);
+  //declare table row variable with tr element
+  var trEl = document.createElement ('tr');
+  //append table row to table foot
+  tfootEl.appendChild(trEl);
+  var tdEl = document.createElement('td');
+  //add Totals as text content to table data element
+  tdEl.textContent = 'Totals';
+  //append table data to table row
+  trEl.appendChild(tdEl);
 
-// printAllHours();
-
-
-// function renderHeader(){
-//   //make a tr and stick it to the DOM
-//   var trEl = document.createElement('tr');
-//   storeListEl.appendChild(trEl);
-
-//   //put the store name in the DOM
-//   var tdEl = document.createElement('td');
-//   tdEl.textContent = ;
-//   trEl.appendChild(tdEl);
-// }
-
-// renderHeader();
-// for (var i = 0; i < allStores.length; i++){
-//   allStores[i].render();
-// }
+  // }
 
 
+  // // var totalPerHourArr = [];
+  // function renderTotal(){
+
+  //nested for loop to loop through each hour
+  for (var currentHour = 0; currentHour < hours.length; currentHour++){
+    var totalPerHour = 0;
+    //nested loop to loop through each store's total cookies per hour
+    for (var store = 0; store < allStores.length; store++ ){
+      totalPerHour += allStores[store].hourlyCookieSalesArr[currentHour];
+    }
+    //create array to store all totals per hour
+    // totalPerHourArr.push(totalPerHour);
+    // console.log('my total per hour array', totalPerHour);
+
+    //add total per hour as table data
+    // for (var i = 0; i < totalPerHour; i++){
+    tdEl = document.createElement('td');
+    storeTableEl.appendChild(trEl);
+    trEl.appendChild(tdEl);
+    tdEl.textContent = totalPerHour;
+
+  }
+}
+
+renderFooter();
 
 
-
-
-
-
-// // //calculate random number of customers by using random function
-//   var numCustomers = random(this.minCustomer, this.maxCustomer);
-//   //Calulcate number of cookies needed
-//   var numCookies = numCustomers * this.cookieSalesAverage;
-//   var numCookiesWhole = Math.round(numCookies);
-//   total = this.numberOfCookiesNeeded + numCookiesWhole;
-
-
-
-// //Store 1 object
-// var pike = {
-//   name: '1st and Pike',
-//   minCust: 23,
-//   maxCust: 65,
-//   saleAverage: 6.3,
-// };
-// // function randomNumber() {
-// //   return pike.maxCust()
-// // }
-
-// //Store 2 object
-// var seaTac = {
-//   name: 'SeaTac Airport',
-//   minCust: 3,
-//   maxCust: 24,
-//   saleAverage: 1.2,
-// };
-
-// var seattleCenter = {
-//   name: 'Seattle Center',
-//   minCust: 11,
-//   maxCust: 38,
-//   saleAverage: 3.7,
-// };
-
-// var capitolHill = {
-//   name: 'Capitol Hill',
-//   minCust: 20,
-//   maxCust: 38,
-//   saleAverage: 2.3,
-// };
-
-// var alki = {
-//   name: 'Alki',
-//   minCust: 2,
-//   maxCust: 16,
-//   saleAverage: 4.6,
-// };
-
-
-
-// var stores = [pike, seaTac, seattleCenter, capitolHill, alki];
-
-
-
-
-
-// function render(){
-//   for(var i = 0; i < stores.length; i++){
-//     // Create <li>
-//     var liEl = document.createElement('li');
-//     // Adding store name as content to <li>
-//     liEl.textContent = stores[i].name;
-//     // Add <li> to end of <ul>
-//     storeListEl.appendChild(liEl);
-
-//     var total = 0;
-//     // Creating a <ul> that will hold the number of cookies
-//     var ul = document.createElement('ul');
-//     for(var j = 0; j < hourlyTotal.length; j++){
-//       //Calculate random number of customers
-//       var numCustomers = random(stores[i].minCust, stores[i].maxCust);
-//       //Calulcate number of cookies
-//       var numCookies = numCustomers * stores[i].saleAverage;
-//       var numCookiesWhole = Math.round(numCookies);
-//       total = total + numCookiesWhole;
-//       //Create <li>
-//       var li = document.createElement('li');
-//       //Add number of cookies as content to <li>
-//       li.textContent = `${hourlyTotal[j]}: ${numCookiesWhole} cookies`;
-//       //add <li> to end of <ul>
-//       ul.appendChild(li);
-//       // Calulate the sum of each our of cookies
-
-//     }
-
-//     li = document.createElement('li');
-//     li.textContent = `Total: ${total} cookies`;
-//     ul.appendChild(li);
-//     storeListEl.appendChild(ul);
-
-
-//   }
-
-
-// }
-
-
-
-
-
-// render();
