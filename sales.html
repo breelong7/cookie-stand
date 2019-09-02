@@ -32,13 +32,13 @@
           <label>Store Name</label>
           <input id="new-store-name" type="text" name="new store name" required /><br>
           <label>Minimum Customers Per Day</label>
-          <input id="minimum-cust" type="number" name="minimum cust" /><br>
+          <input id="minimum-cust" type="number" name="minimum cust" required /><br>
           <label>Maximum Customers Per Day</label>
-          <input id="maximum-cust" type="number" name="maximum cust" /><br>
+          <input id="maximum-cust" type="number" name="maximum cust" required /><br>
           <label>Average Cookies Purchased Per Customer</label>
-          <input id="avg-cookies-per-cust" type="number" name="avg per cust" /><br>
-          <input type="submit" onclick="alert('Thanks for adding a new store!')" value="Submit">
-          <input type="reset">
+          <input id="avg-cookies-per-cust" type="number" name="avg per cust" required /><br>
+          <input class="button" type="submit" onclick="alert('Thanks for adding a new store!')" value="Submit">
+          <input class="button" type="reset">
 
         </fieldset>
       </form>
