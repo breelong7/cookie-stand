@@ -20,17 +20,22 @@
   margin-left:2px;
   border:2px solid rgb(195, 91, 91);
   padding: 1%;
-  block
 
 }
 
 #store-table {
   background: pink;
   text-align:center; 
-  margin-left:auto; 
-  margin-right:auto; 
-  width:100px;
+  border: 2px solid #9b394e;
+  display: block;
+  padding: 2px;
 
+}
+
+tbody {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  display:block;
 }
 
 #opening-paragraph {
@@ -52,6 +57,7 @@ td {
   padding: 10px;
   align-content: space-between;
   justify-content: center;
+  
 }
 
 
@@ -128,9 +134,19 @@ tfoot {
   font-size: 150%;
 }
 
+#store-form {
+  border: 2px dashed #9b394e;
+  display: block;
+  padding: 2px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+
+
 label {
   margin:5px;
-  /* width:900px; */
+  padding: 1px;
   font-family: sans-serif;
   display: flex;
   justify-content: left;
@@ -138,8 +154,10 @@ label {
 }
 
 h2 {
-  margin: 5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(85, 28, 47);
   font-size: 250%;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
 }
