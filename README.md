@@ -13,7 +13,7 @@ The purpose of this project is to create a webpage that promotes my friend Pat's
   <ul>
     <li>VS Code</li>
     <li>Salmon Photo Credit: my friend Pat</li>
-    <li></li>
+    <li>Ribbon - https://css-tricks.com/snippets/css/ribbon/</li>
   </ul>  
 
 
