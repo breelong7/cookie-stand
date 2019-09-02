@@ -11,7 +11,7 @@
   font-family: sans-serif;
   display: flex;
   justify-content: left;
-  margin-left: 520px;
+  margin-left: 600px;
 }
 
 #sales-nav li {
@@ -33,16 +33,16 @@
   margin-top: 25px;
   margin-bottom: 50px;
   margin-left: 220px;
-
 }
 
 
 #opening-paragraph {
-  border: 4px double black;
+  border: 4px double #b15468;
   height: 50%;
   width: 50%;
   padding: 2%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 350px;
 }
 
 #store-list {
@@ -159,6 +159,7 @@ h2 {
   display: block;
   margin: 0 auto;
   width: 50%;
+  margin-bottom: 10px;
 }
 
 .button {
