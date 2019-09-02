@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
 'use strict';
 
+var formEl = document.getElementById('store-form');
+
 var storeTableEl = document.getElementById('store-table');
 var allStores = [];
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
@@ -189,3 +191,18 @@ function renderFooter() {
 }
 
 renderFooter();
+
+// forms
+
+formEl.addEventListener('submit', handleClick);
+
+//function to prevent page refresh
+function handleClick(event) {
+  event.preventDefault();
+}
+
+//function to handle a form submission
+// function handleFormSubmit(event) {
+//   event.preventDefault();
+
+// }

@@ -11,6 +11,7 @@
   font-family: sans-serif;
   display: flex;
   justify-content: left;
+  margin-left: 600px;
 }
 
 #sales-nav li {
@@ -20,25 +21,28 @@
   margin-left:2px;
   border:2px solid rgb(195, 91, 91);
   padding: 1%;
-  block
 
 }
 
 #store-table {
   background: pink;
   text-align:center; 
-  margin-left:auto; 
-  margin-right:auto; 
-  width:100px;
-
+  border: 2px solid #9b394e;
+  display: block;
+  padding: 2px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  margin-left: 220px;
 }
 
+
 #opening-paragraph {
-  border: 4px double black;
+  border: 4px double #b15468;
   height: 50%;
   width: 50%;
   padding: 2%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 350px;
 }
 
 #store-list {
@@ -52,6 +56,7 @@ td {
   padding: 10px;
   align-content: space-between;
   justify-content: center;
+  
 }
 
 
@@ -126,4 +131,46 @@ tfoot {
 .ribbon-content {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 150%;
+}
+
+#store-form {
+  border: 2px dashed #9b394e;
+  display: block;
+  padding: 2px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+
+
+label {
+  margin:5px;
+  padding: 1px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: left;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(85, 28, 47);
+  font-size: 250%;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: pink;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  border: 1px solid black;
+  margin: 4px;
+}
+
+.button:hover {
+  padding: 3px;
+  border: 3px solid black;
 }
