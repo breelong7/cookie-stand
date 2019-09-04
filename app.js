@@ -193,6 +193,7 @@ function renderFooter() {
 renderFooter();
 
 // forms
+// document.forms['store-form'].submit();
 
 formEl.addEventListener('submit', handleFormSubmit);
 // function to handle a form submission
@@ -212,8 +213,8 @@ function handleFormSubmit(e) {
   //create new Store object
   new Store(storeName, minCustomer, maxCustomer, cookieSalesAverage);
 
+  // console.log(allStores[5]);
 }
 
 //
 
-console.log(allStores[5]);
