@@ -237,7 +237,6 @@ figure {
 }
 
 #merch-list {
-  
   border: 2px solid rgb(85, 28, 47);
   float: left;
   clear: right;
@@ -247,4 +246,10 @@ figure {
   width: 90%;
   text-align: center;
   margin-bottom: 50px;
+  margin-left: 23px;
+}
+
+#shop-credit{
+  font-size: 12px;
+  inline
 }
