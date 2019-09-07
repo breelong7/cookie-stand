@@ -1,12 +1,13 @@
 /* eslint-disable no-console */
 'use strict';
 
-var formEl = document.getElementById('store-form').submit();
+// var formEl = document.getElementById('store-form').submit();
 
 var storeTableEl = document.getElementById('store-table');
 var allStores = [];
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
+console.log(allStores[5]);
 
 function random(min, max){
   return Math.random() * (max - min) + min;
