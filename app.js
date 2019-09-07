@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 'use strict';
 
-var formEl = document.getElementById('store-form');
+var formEl = document.getElementById('store-form').submit();
 
 var storeTableEl = document.getElementById('store-table');
 var allStores = [];
@@ -193,8 +193,8 @@ function renderFooter() {
 renderFooter();
 
 // forms
-// document.forms['store-form'].submit();
 
+//add event listener to submit
 formEl.addEventListener('submit', handleFormSubmit);
 // function to handle a form submission
 function handleFormSubmit(e) {
@@ -215,6 +215,3 @@ function handleFormSubmit(e) {
 
   // console.log(allStores[5]);
 }
-
-//
-

@@ -174,3 +174,43 @@ h2 {
   padding: 3px;
   border: 3px solid black;
 }
+
+#hours {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 35px;
+  display: block;
+  padding: 2px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.location-name {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  display: block;
+  padding: 2px;
+  margin: 0 auto;
+  width: 50%;
+ 
+  
+}
+
+.location-address {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  display: block;
+  padding: 2px;
+  margin: 0 auto;
+  width: 50%;
+  
+}
+
+#uber-logo {
+display: block;
+padding: 2px;
+margin: 0 auto;
+}
+
+#locations {
+  margin-left: 50px;
+}
