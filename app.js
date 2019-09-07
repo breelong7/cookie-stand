@@ -1,13 +1,12 @@
 /* eslint-disable no-console */
 'use strict';
 
-// var formEl = document.getElementById('store-form').submit();
+var formEl = document.getElementById('store-form');
 
 var storeTableEl = document.getElementById('store-table');
 var allStores = [];
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-console.log(allStores[5]);
 
 function random(min, max){
   return Math.random() * (max - min) + min;
@@ -191,7 +190,6 @@ function renderFooter() {
   trEl.appendChild(tdEl);
 }
 
-renderFooter();
 
 // forms
 
@@ -199,20 +197,30 @@ renderFooter();
 formEl.addEventListener('submit', handleFormSubmit);
 // function to handle a form submission
 function handleFormSubmit(e) {
+  console.log(e);
   //prevent automatic page refresh
-  event.preventDefault();
-
+  e.preventDefault();
+  
   //get input from store name box
   var storeName = e.target.storeName.value;
   //get input from min customer box
-  var minCustomer = e.target.minCustomer.value;
+  var minCustomer = parseInt(e.target.minCustomer.value);
   //get input from max customer box
-  var maxCustomer = e.target.maxCustomer.value;
+  var maxCustomer = parseInt(e.target.maxCustomer.value);
   //get input from cookie sales average box
-  var cookieSalesAverage = e.target.cookieSalesAverage.value;
-
-  //create new Store object
+  var cookieSalesAverage = parseInt(e.target.cookieSalesAverage.value);
+  
+  //create new Store instance
   new Store(storeName, minCustomer, maxCustomer, cookieSalesAverage);
+  storeTableEl.innerHTML = '';
+  console.log('clicked');
 
-  // console.log(allStores[5]);
+  allStores[allStores.length - 1].dailyTotal();
+
+  printHours();
+  printAllStores();
+  renderFooter();
 }
+
+
+renderFooter();
