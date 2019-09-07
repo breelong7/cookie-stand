@@ -1,12 +1,13 @@
 /* eslint-disable no-console */
 'use strict';
 
-var formEl = document.getElementById('store-form');
+// var formEl = document.getElementById('store-form').submit();
 
 var storeTableEl = document.getElementById('store-table');
 var allStores = [];
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
+console.log(allStores[5]);
 
 function random(min, max){
   return Math.random() * (max - min) + min;
@@ -22,7 +23,7 @@ function Store(storeName, minCustomer, maxCustomer, cookieSalesAverage){
   this.hourlyCookieSalesArr = [];
 
   allStores.push(this);
-  console.log(this.hourlyCookieSalesArr);
+  // console.log(this.hourlyCookieSalesArr);
 }
 
 
@@ -114,7 +115,7 @@ Store.prototype.render = function(){
     tdEl = document.createElement('td');
     tdEl.textContent = this.hourlyCookieSalesArr[i];
     trEl.appendChild(tdEl);
-    console.log(this.hourlyCookieSalesArr[i] + ':' + hours[i]);
+    // console.log(this.hourlyCookieSalesArr[i] + ':' + hours[i]);
   }
 
   //create a td
@@ -178,8 +179,8 @@ function renderFooter() {
     //loop through stores to get sum of hourly totals
     for (var k = 0; k < allStores.length; k++){
       hourTotal += allStores[k].hourlyCookieSalesArr[i];
-      console.log('hour total', hourTotal);
-      console.log('grand total', grandTotal);
+      // console.log('hour total', hourTotal);
+      // console.log('grand total', grandTotal);
     }
     //grand total equals sum of hourly totals
     grandTotal += hourTotal;
@@ -194,15 +195,24 @@ renderFooter();
 
 // forms
 
-formEl.addEventListener('submit', handleClick);
-
-//function to prevent page refresh
-function handleClick(event) {
+//add event listener to submit
+formEl.addEventListener('submit', handleFormSubmit);
+// function to handle a form submission
+function handleFormSubmit(e) {
+  //prevent automatic page refresh
   event.preventDefault();
+
+  //get input from store name box
+  var storeName = e.target.storeName.value;
+  //get input from min customer box
+  var minCustomer = e.target.minCustomer.value;
+  //get input from max customer box
+  var maxCustomer = e.target.maxCustomer.value;
+  //get input from cookie sales average box
+  var cookieSalesAverage = e.target.cookieSalesAverage.value;
+
+  //create new Store object
+  new Store(storeName, minCustomer, maxCustomer, cookieSalesAverage);
+
+  // console.log(allStores[5]);
 }
-
-//function to handle a form submission
-// function handleFormSubmit(event) {
-//   event.preventDefault();
-
-// }

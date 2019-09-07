@@ -36,7 +36,7 @@
 }
 
 
-#opening-paragraph {
+.opening-paragraph {
   border: 4px double #b15468;
   height: 50%;
   width: 50%;
@@ -142,7 +142,6 @@ tfoot {
 }
 
 
-
 label {
   margin:5px;
   padding: 1px;
@@ -173,4 +172,84 @@ h2 {
 .button:hover {
   padding: 3px;
   border: 3px solid black;
+}
+
+#hours {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 35px;
+  display: block;
+  padding: 2px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+#location-list {
+  /* width: 1000px; */
+  border: 2px solid rgb(85, 28, 47);
+  float: left;
+  clear: right;
+  display: block;
+  padding: 50px;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.location-name {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+.location-address {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  color: rgb(216, 54, 81);
+
+  
+}
+
+figure {
+  float: left;
+  clear: right;
+  display: block;
+  padding: 20px;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
+
+#locations {
+  margin-left: 50px;
+}
+
+.google-map {
+  float: left;
+}
+
+.pay-options {
+  padding: 50px;
+  float: left;
+}
+
+#merch-list {
+  border: 2px solid rgb(85, 28, 47);
+  float: left;
+  clear: right;
+  display: block;
+  padding: 50px;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-left: 23px;
+}
+
+#shop-credit{
+  font-size: 12px;
+  inline
 }

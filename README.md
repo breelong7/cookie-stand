@@ -14,6 +14,7 @@ The purpose of this project is to create a webpage that promotes my friend Pat's
     <li>VS Code</li>
     <li>Salmon Photo Credit: my friend Pat</li>
     <li>Ribbon - https://css-tricks.com/snippets/css/ribbon/</li>
+    <li>Uber Eats logo - Ubereats.com
   </ul>  
 
 
