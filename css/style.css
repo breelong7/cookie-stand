@@ -36,7 +36,7 @@
 }
 
 
-#opening-paragraph {
+.opening-paragraph {
   border: 4px double #b15468;
   height: 50%;
   width: 50%;
@@ -142,7 +142,6 @@ tfoot {
 }
 
 
-
 label {
   margin:5px;
   padding: 1px;
@@ -200,10 +199,6 @@ h2 {
 .location-name {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 25px;
-  /* display: block;
-  padding: 2px;
-  margin: 0 auto;
-  width: 50%; */
   margin-top: 30px;
 }
 
@@ -211,18 +206,22 @@ h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 15px;
   color: rgb(216, 54, 81);
-  /* display: block;
-  padding: 2px;
-  margin: 0 auto;
-  width: 50%; */
+
   
 }
 
-#uber-logo {
-display: block;
-padding: 2px;
-margin: 0 auto;
+figure {
+  float: left;
+  clear: right;
+  display: block;
+  padding: 20px;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 50px;
 }
+
+
 
 #locations {
   margin-left: 50px;
@@ -230,4 +229,22 @@ margin: 0 auto;
 
 .google-map {
   float: left;
+}
+
+.pay-options {
+  padding: 50px;
+  float: left;
+}
+
+#merch-list {
+  
+  border: 2px solid rgb(85, 28, 47);
+  float: left;
+  clear: right;
+  display: block;
+  padding: 50px;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 50px;
 }
