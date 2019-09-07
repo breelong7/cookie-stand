@@ -184,24 +184,37 @@ h2 {
   width: 50%;
 }
 
+#location-list {
+  /* width: 1000px; */
+  border: 2px solid rgb(85, 28, 47);
+  float: left;
+  clear: right;
+  display: block;
+  padding: 50px;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .location-name {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 25px;
-  display: block;
+  /* display: block;
   padding: 2px;
   margin: 0 auto;
-  width: 50%;
- 
-  
+  width: 50%; */
+  margin-top: 30px;
 }
 
 .location-address {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 15px;
-  display: block;
+  color: rgb(216, 54, 81);
+  /* display: block;
   padding: 2px;
   margin: 0 auto;
-  width: 50%;
+  width: 50%; */
   
 }
 
@@ -213,4 +226,8 @@ margin: 0 auto;
 
 #locations {
   margin-left: 50px;
+}
+
+.google-map {
+  float: left;
 }
