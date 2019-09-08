@@ -8,12 +8,9 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
-
-
     <h1 class="ribbon">
-        <strong class="ribbon-content">Pat's <img src="img/salmon.png" width="100" alt="Image of a salmon fish"/> Cookies</strong>
-     </h1>
-
+      <strong class="ribbon-content">Pat's <img src="img/salmon.png" width="100" alt="Image of a salmon fish"/> Cookies</strong>
+    </h1>
     <header>
     <div>
       <nav>
@@ -24,44 +21,32 @@
         </ul>
      </nav>
     </div>
-  </header>
+    </header>
    <main>
-    <section id="add-store-section">
-      <h2>Add a new store!</h2>
-      <form id="store-form">
-        <fieldset>
-          <label>Store Name</label>
-          <input id="storeName" type="text" name="storeName" required /><br>
-          <label>Minimum Customers Per Day</label>
-          <input id="minCustomer" type="number" name="minCustomer" required /><br>
-          <label>Maximum Customers Per Day</label>
-          <input id="maxCustomer" type="number" name="maxCustomer" required /><br>
-          <label>Average Cookies Purchased Per Customer</label>
-          <input id="cookieSalesAverage" type="number" name="cookieSalesAverage" required /><br>
-          <input class="button" type="submit" onclick="alert('Thanks for adding a new store!')" value="Submit">
-          <input class="button" type="reset">
-
-        </fieldset>
-      </form>
-    </section>
-    <div>
-      <table>
-        <tbody id="store-table">
-        </tbody>
-      </table>
-    </div>
-
-  </main> 
-
-
-
-
-  <!-- <ul id='store-list'>
-
-
-  </ul> -->
-
-
-  <script src="app.js" type="text/javascript"></script>  
+      <section id="add-store-section">
+        <h2>Add a new store!</h2>
+          <form id="store-form">
+            <fieldset>
+              <label>Store Name</label>
+              <input id="storeName" type="text" name="storeName" required /><br>
+              <label>Minimum Customers Per Day</label>
+              <input id="minCustomer" type="number" name="minCustomer" required /><br>
+              <label>Maximum Customers Per Day</label>
+              <input id="maxCustomer" type="number" name="maxCustomer" required /><br>
+              <label>Average Cookies Purchased Per Customer</label>
+              <input id="cookieSalesAverage" type="number" name="cookieSalesAverage" required /><br>
+              <input class="button" type="submit" onclick="alert('Thanks for adding a new store!')" value="Submit">
+              <input class="button" type="reset">
+          </fieldset>
+        </form>
+      </section>
+      <div>
+        <table>
+          <tbody id="store-table">
+          </tbody>
+        </table>
+      </div>
+    </main> 
+    <script src="app.js" type="text/javascript"></script>  
   </body>
 </html>
